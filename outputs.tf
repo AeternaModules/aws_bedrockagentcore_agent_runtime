@@ -1,7 +1,3 @@
-output "bedrockagentcore_agent_runtimes_id" {
-  description = "Map of id values across all bedrockagentcore_agent_runtimes, keyed the same as var.bedrockagentcore_agent_runtimes"
-  value       = { for k, v in aws_bedrockagentcore_agent_runtime.bedrockagentcore_agent_runtimes : k => v.id if v.id != null && length(v.id) > 0 }
-}
 output "bedrockagentcore_agent_runtimes_agent_runtime_arn" {
   description = "Map of agent_runtime_arn values across all bedrockagentcore_agent_runtimes, keyed the same as var.bedrockagentcore_agent_runtimes"
   value       = { for k, v in aws_bedrockagentcore_agent_runtime.bedrockagentcore_agent_runtimes : k => v.agent_runtime_arn if v.agent_runtime_arn != null && length(v.agent_runtime_arn) > 0 }
